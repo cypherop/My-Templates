@@ -3,13 +3,15 @@
 */
 
 #include <bits/stdc++.h>
+#include <unistd.h>
 #include <ext/pb_ds/assoc_container.hpp> 
 #include <ext/pb_ds/tree_policy.hpp> 
 
 #define rep(i,j,n) for(i=j;i<n;i++)
 #define repi(i,j,n) for(i=j;i>n;i--)
-#define inf 100001
+#define inf 1e18
 #define M 1000000007
+#define pie 3.141592653589793238
 #define ll long long
 #define ld long double
 #define vll vector<long long>
@@ -50,17 +52,19 @@ void init(ll* a,ll n,ll val){
 		a[i]=val;
 }
 
-
+void solve(){
+	ll i,j,k;
+}
 
 int main()
 {
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 	cout.tie(NULL);	
-	ll t=1,i,j;
-	cin>>t;
-	while(t--){
-		
+	ll T=1;
+	cin>>T;
+	while(T--){
+		solve();
 	}
 	return 0;
 }
