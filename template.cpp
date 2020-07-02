@@ -14,17 +14,13 @@
 #define pie 3.141592653589793238
 #define ll long long
 #define ld long double
-#define vll vector<long long>
-#define vi vector<int>
-#define pll pair<long long,long long>
-#define pii pair<int,int>
-#define vpii vector<pair<int,int> >
-#define vpll vector<pair<long long,long long> >
+#define vll vector<ll>
+#define pll pair<ll,ll>
+#define vpll vector<pll>
 #define pb push_back
-#define pf pop_front
 #define F first
 #define S second
-#define endl '\n'
+#define UQ(x) (x).resize(distance((x).begin(),unique(x.begin(),x.end())))
 
 using namespace std;
 using namespace __gnu_pbds; 
@@ -32,6 +28,8 @@ using namespace __gnu_pbds;
 template<typename T>
 using ordered_set=tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
 
+mt19937 rnd(chrono::high_resolution_clock::now().time_since_epoch().count());
+mt19937_64 rnd64(chrono::high_resolution_clock::now().time_since_epoch().count());
 
 ll power(ll a,ll m,ll mod){
 	ll ans=1;
@@ -53,14 +51,13 @@ void init(ll* a,ll n,ll val){
 }
 
 void solve(){
-	ll i,j,k;
+	ll i,j,_;
 }
 
 int main()
 {
-	ios_base::sync_with_stdio(false);
-	cin.tie(NULL);
-	cout.tie(NULL);	
+	ios::sync_with_stdio(0);
+ 	cin.tie(0);
 	ll T=1;
 	cin>>T;
 	while(T--){
