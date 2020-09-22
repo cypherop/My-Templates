@@ -20,6 +20,7 @@
 #define pb push_back
 #define F first
 #define S second
+#define endl '\n'
 #define UQ(x) (x).resize(distance((x).begin(),unique(x.begin(),x.end())))
 
 using namespace std;
@@ -34,10 +35,7 @@ mt19937_64 rnd64(chrono::high_resolution_clock::now().time_since_epoch().count()
 ll power(ll a,ll m,ll mod){
 	ll ans=1;
 	while(m){
-		if(m%2){
-			ans*=a;
-			ans%=(mod);
-		}
+		if(m%2) ans*=a, ans%=(mod);
 		a=(a*a)%(mod);
 		m>>=1;
 	}
