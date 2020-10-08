@@ -1,3 +1,5 @@
+//complexity O(EVlog(U)) where U is maxflow
+
 struct DinicEdge{
     ll u, v, f, c;
 
@@ -13,7 +15,7 @@ struct DinicWithScaling {
 
     const ll now_inf = 1e9 + 7;
 
-    ll n, m, s, i, t, limit;
+    ll n, m, s, t, limit;
     vector<DinicEdge> edges;
     vector<vll> adj;
     vll ptr, level;
@@ -37,6 +39,7 @@ struct DinicWithScaling {
     }
 
     bool bfs() {
+        ll i;
         rep(i,s,t + 1) level[i] = now_inf;
         level[s] = 0;
         queue.clear();
@@ -68,7 +71,7 @@ struct DinicWithScaling {
     }
 
     ll maxFlow() {
-        ll flow = 0;
+        ll flow = 0, i;
         for(limit = (1 << 30); limit > 0;) {
             if(!bfs()) {
                 limit >>= 1;
