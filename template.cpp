@@ -1,3 +1,9 @@
+#ifdef ONLINE_JUDGE
+#pragma GCC optimize("O3")
+#pragma GCC target("avx2")
+#define NDEBUG
+#endif
+
 #include <bits/stdc++.h>
 #include <unistd.h>
 #include <ext/pb_ds/assoc_container.hpp> 
